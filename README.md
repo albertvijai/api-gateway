@@ -1,1 +1,1 @@
-# spring-gateway
+# app-gateway
