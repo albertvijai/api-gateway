@@ -2,7 +2,11 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: after_route
-          uri: https://example.org
+        - id: gw-get-route
+          uri: http://httpbin.org:80
           predicates:
-            - After=2019-01-20T17:42:47.789-07:00[America/Denver]
+            - Path=/get
+        - id: bd-route
+          uri: http://baeldung.com
+          predicates:
+            - Path=/bd
